@@ -2,12 +2,14 @@
 static const Block blocks[] = {
 	/*Icon*/	/*Command*/		/*Update Interval*/	/*Update Signal*/
 	//{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g",	30,		0},
-    {" yuri folder size: ", "yurisize",                   400,      0},
-
-	{" ", "date '+(%a) %d %b'",        					12000,		0},
-    {" ", "date '+%H:%M'",                                  60,     0},
+    {"",                      "todonow",                          120,    0},
+    {" Yuri Folder: ",  "yurisize",                         400,    0},
+    {"",                      "mstatus",                          30,     0},
+    {"",                     "acpi | awk -F, '{ print $2 }'",    400,    0},
+	  {" ",                    "date '+(%a) %d %b'",        		  	12000,	0},
+    {" ",                    "date '+%H:%M'",                    60,     0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
-static char delim[] = " | ";
-static unsigned int delimLen = 5;
+static char delim[] = "  ";
+static unsigned int delimLen = 13;
