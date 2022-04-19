@@ -72,6 +72,7 @@ void getcmd(const Block *block, char *output) {
   i = output[i - 1] == '\n' ? i - 1 : i;
   if (delim[0] != '\0') {
     strncpy(output + i, delim, delimLen);
+    strcat(output, " ");
   } else
     output[i++] = '\0';
   pclose(cmdf);
